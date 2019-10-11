@@ -10,7 +10,7 @@ exports[`matches snapshot 1`] = `
     >
       <img
         alt="logo"
-        class="App-logo"
+        class="App-log"
         src="logo.svg"
       />
       <p>
@@ -18,7 +18,7 @@ exports[`matches snapshot 1`] = `
         <code>
           src/App.js
         </code>
-         and save to reload!
+         and save to reload THE CHANGE!
       </p>
       <a
         class="App-link"

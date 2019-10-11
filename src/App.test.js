@@ -12,6 +12,5 @@ beforeEach(() => {
 });
 
 it('matches snapshot', () => {
-  console.log(wrapper)
   expect(wrapper.container).toMatchSnapshot()
 });

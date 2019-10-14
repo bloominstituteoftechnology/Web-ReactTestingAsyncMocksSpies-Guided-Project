@@ -2,13 +2,15 @@ import React, { useState }  from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
 
-  const increaseCount = () => {
-    setTimeout(() => {
-      setCount(count + 1)
-    },100)
+  const increaseCountSync = () => {
+    // 
+  }
+
+  const increaseCountAsync = () => {
+    // 
   }
 
   return (
@@ -16,10 +18,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div>the count is {count}</div>
-        <button onClick={increaseCount}>increase</button>
+
+        <button onClick={increaseCountSync}>increase sync</button>
+        <button onClick={increaseCountAsync}>increase async</button>
       </header>
     </div>
   );
 }
-
-export default App;

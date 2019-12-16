@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 // STEP 1 pull deps in
 import * as rtl from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';

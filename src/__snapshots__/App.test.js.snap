@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <img
+        alt="logo"
+        class="App-logo"
+        src="logo.svg"
+      />
+      <div>
+        the count is 
+        0
+      </div>
+      <button>
+        increase sync
+      </button>
+      <button>
+        increase async
+      </button>
+    </header>
+  </div>
+</div>
+`;

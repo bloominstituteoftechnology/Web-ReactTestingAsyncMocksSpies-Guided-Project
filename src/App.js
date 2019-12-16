@@ -10,7 +10,9 @@ export default function App() {
   }
 
   const increaseCountAsync = () => {
-    // ?
+    setTimeout(() => {
+      setCount(count => count + 1);
+    }, 200);
   }
 
   return (

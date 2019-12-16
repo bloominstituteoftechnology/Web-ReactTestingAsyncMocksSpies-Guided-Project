@@ -18,5 +18,16 @@ beforeEach(() => {
 });
 
 it('renders without crashing', () => {
-  wrapper.debug();
+  expect(wrapper.container).toMatchSnapshot()
 });
+
+it('can increase the count to 1, asynchronously', async () => {
+  rtl.fireEvent.click(wrapper.queryByText(/async/))
+  expect(await wrapper.findByText(/the count is 1/))
+})
+
+it('can increase the count to 2, asynchronously', async () => {
+  rtl.fireEvent.click(wrapper.queryByText(/async/))
+  rtl.fireEvent.click(wrapper.queryByText(/async/))
+  expect(await wrapper.findByText(/the count is 2/))
+})

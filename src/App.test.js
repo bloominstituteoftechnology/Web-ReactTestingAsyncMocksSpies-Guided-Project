@@ -4,6 +4,8 @@ import * as rtl from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 
+jest.useFakeTimers();
+
 // react testing library requires a "cleanup" operation
 // after each test
 // STEP 2 set up cleaning up in afterEach
@@ -23,11 +25,15 @@ it('renders without crashing', () => {
 
 it('can increase the count to 1, asynchronously', async () => {
   rtl.fireEvent.click(wrapper.queryByText(/async/))
+  jest.runAllTimers();
   expect(await wrapper.findByText(/the count is 1/))
 })
 
 it('can increase the count to 2, asynchronously', async () => {
   rtl.fireEvent.click(wrapper.queryByText(/async/))
+  jest.runAllTimers();
+  expect(await wrapper.findByText(/the count is 1/))
   rtl.fireEvent.click(wrapper.queryByText(/async/))
+  jest.runAllTimers();
   expect(await wrapper.findByText(/the count is 2/))
 })

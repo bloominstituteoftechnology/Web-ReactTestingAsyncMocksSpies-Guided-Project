@@ -14,12 +14,10 @@ afterEach(rtl.cleanup);
 // a beforeEach function
 let wrapper;
 beforeEach(() => {
-  // we want the "wrapper" recreated
+  // we want the "wrapper" recreated at every test
   wrapper = rtl.render(<App />)
-})
+});
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  wrapper.debug();
 });

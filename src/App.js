@@ -3,16 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import uuid from 'uuid'
 
-jest.mock('uuid', () => {
-  return () => 'hardcoded id'
-});
-
-// jest.mock('./helpers', () => {
-//   return {
-//     timestamp: () => 'same timestamp'
-//   }
-// })
-
 export default function App() {
   const [count, setCount] = useState(0);
 

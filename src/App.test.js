@@ -4,6 +4,16 @@ import * as rtl from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 
+jest.mock('uuid', () => {
+  return () => 'hardcoded id'
+});
+
+// jest.mock('./helpers', () => {
+//   return {
+//     timestamp: () => 'same timestamp'
+//   }
+// })
+
 jest.useFakeTimers();
 
 // react testing library requires a "cleanup" operation

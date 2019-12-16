@@ -17,6 +17,10 @@ exports[`renders without crashing 1`] = `
         the count is 
         0
       </div>
+      <div>
+        this is random: 
+        hardcoded id
+      </div>
       <button>
         increase sync
       </button>

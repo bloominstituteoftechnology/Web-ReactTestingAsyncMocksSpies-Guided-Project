@@ -10,6 +10,12 @@ import App from './App';
 // STEP 2 set up cleaning up in afterEach
 afterEach(rtl.cleanup);
 
+// take care of repetitive operations inside
+// a beforeEach function
+beforeEach(() => {
+  // we want the "wrapper" recreated
+})
+
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);

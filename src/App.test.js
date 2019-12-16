@@ -8,6 +8,13 @@ jest.mock('uuid', () => {
   return () => 'hardcoded id'
 });
 
+jest.mock('axios', () => {
+  return {
+    get: () => Promise.resolve({ data: [{}, {}] }),
+    post: () => Promise.resolve({ data: { message: 'thing got created!' } })
+  }
+});
+
 // jest.mock('./helpers', () => {
 //   return {
 //     timestamp: () => 'same timestamp'
